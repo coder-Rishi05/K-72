@@ -6,10 +6,10 @@ import HomeHeroText from "../components/Home/HomeHeroText";
 const Home = () => {
   return (
     <div className="">
-      <div className="h-screen w-screen fixed bg-amber-300 ">
+      <div className="h-screen w-screen fixed ">
         <Video />
       </div>
-      <div className=" flex flex-col h-screen w-1/2 relative bg-amber-300 ">
+      <div className=" flex flex-col h-screen w-1/2 relative ">
         <HomeHeroText />
         <HomeBottomText />
       </div>
