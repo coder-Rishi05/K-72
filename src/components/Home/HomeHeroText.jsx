@@ -21,8 +21,8 @@ const HomeHeroText = () => {
       
     </div>
     <div className="flex w-screen items-center justify-end">
-        <p className="text-end" >
-          K72 is an agency that builds brands from every angle. Today, tomorrow
+        <p className="  text-white font-bold text-sm w-[20vw]" >
+          <span className="ml-10" >K72 is an agency that builds brands</span> from every angle. Today, tomorrow
           and years from now. We think the best sparks fly when comfort zones
           get left behind and friction infuses our strategies, brands and
           communications with real feeling. We’re transparent, honest and say
