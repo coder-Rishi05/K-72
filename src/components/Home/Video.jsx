@@ -8,7 +8,7 @@ const Video = () => {
         autoPlay
         muted
         className="h-full w-full object-cover"
-        src="/public/vid.mp4"
+        src="/vid.mp4"
       />
     </div>
   );
