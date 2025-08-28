@@ -69,3 +69,50 @@ to add fonts
             src: url(../public/fonts/Lausanne-500.woff2);
         }
 ```
+
+### Installing gsap
+
+npm i gsap
+npm i @gsap/react
+
+```
+
+useRef => It is used to select element in the react like we use document.queryselector in js.
+useRef takes reference of the element.
+
+ex: 
+
+const imageDivRef = useRef(null);
+
+<div ref={imageDivRef} >
+hi
+</div>
+
+
+here now imageDivRef will have reference to div.
+
+```
+
+
+```
+Using gsap in react.
+
+first we need gsap and useGsap in our react.
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+  useGSAP(()=>{
+    gsap.to(imageDivRef.current,{ // using the useRef div to animate and apply gsap onto it.
+      x:300,
+      ease:"bounce"
+    })
+  });
+
+
+Using ScrollTrigger
+
+first registering Scrolltrigger
+gsap.registerPlugin(ScrollTrigger)
+
+```
