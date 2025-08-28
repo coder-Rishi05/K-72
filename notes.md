@@ -113,6 +113,21 @@ import gsap from "gsap";
 Using ScrollTrigger
 
 first registering Scrolltrigger
+
+
+import { ScrollTrigger } from "gsap/all";
+
 gsap.registerPlugin(ScrollTrigger)
+
+useGSAP(() => {
+    gsap.to(imageDivRef.current, {
+      scrollTrigger: {
+        trigger: imageDivRef,
+        markers: true,
+        start: "top 50%",
+        end: "20% 50%",
+      },
+    });
+  });
 
 ```

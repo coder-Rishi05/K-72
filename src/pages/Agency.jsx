@@ -8,14 +8,12 @@ const Agency = () => {
   const imageDivRef = useRef(null);
 
   useGSAP(() => {
-    gsap.to(imageDivRef.current, {
-      scrollTrigger: {
-        trigger: imageDivRef,
-        markers: true,
-        start: "top 50%",
-        end: "20% 50%",
-      },
-    });
+    // gsap.to(imageDivRef.current, {
+    //   scrollTrigger: {
+    //     trigger: imageDivRef,
+    //     markers: true,
+    //   },
+    // });
   });
 
   return (
