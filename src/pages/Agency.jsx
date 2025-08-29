@@ -6,11 +6,10 @@ import React, { useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const Agency = () => {
-
   // useLocation
 
   // const locate = useLocation();
-  
+
   //   console.log(locate.pathname);
 
   gsap.registerPlugin(ScrollTrigger);
@@ -32,6 +31,7 @@ const Agency = () => {
   // });
 
   const imgArray = [
+    "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
     "/img/img1.jpeg",
     "/img/img2.jpeg",
     "/img/img3.jpeg",
@@ -54,8 +54,13 @@ const Agency = () => {
         // markers: true,
         start: "top 21.9%",
         end: "top -100%",
-        scrub: true,
+        scrub: 1,
         pin: true,
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: "transform",
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
         onUpdate: (e) => {
           let imgIndex;
           if (e.progress < 1) {
@@ -73,10 +78,10 @@ const Agency = () => {
 
   return (
     <div>
-      <div className="section1  ">
+      <div className="section1 relative py-1 ">
         <div
           ref={imageDivRef}
-          className="img h-80 -z-10 top-40 left-112  absolute w-60"
+          className="img h-80 -z-10 top-40 left-112   absolute w-60"
         >
           <img
             ref={imageRef}
