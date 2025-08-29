@@ -3,8 +3,16 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 import React, { useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 const Agency = () => {
+
+  // useLocation
+
+  // const locate = useLocation();
+  
+  //   console.log(locate.pathname);
+
   gsap.registerPlugin(ScrollTrigger);
 
   const imageDivRef = useRef(null);
@@ -24,19 +32,19 @@ const Agency = () => {
   // });
 
   const imgArray = [
-    "public/img/img1.jpeg",
-    "public/img/img2.jpeg",
-    "public/img/img3.jpeg",
-    "public/img/img4.jpeg",
-    "public/img/img5.jpeg",
-    "public/img/img6.jpeg",
-    "public/img/img7.jpeg",
-    "public/img/img8.jpeg",
-    "public/img/img9.jpeg",
-    "public/img/img10.jpeg",
-    "public/img/img11.jpeg",
-    "public/img/img12.jpeg",
-    "public/img/img13.jpeg",
+    "/img/img1.jpeg",
+    "/img/img2.jpeg",
+    "/img/img3.jpeg",
+    "/img/img4.jpeg",
+    "/img/img5.jpeg",
+    "/img/img6.jpeg",
+    "/img/img7.jpeg",
+    "/img/img8.jpeg",
+    "/img/img9.jpeg",
+    "/img/img10.jpeg",
+    "/img/img11.jpeg",
+    "/img/img12.jpeg",
+    "/img/img13.jpeg",
   ];
 
   useGSAP(function () {
@@ -64,7 +72,6 @@ const Agency = () => {
   });
 
   return (
-   
     <div>
       <div className="section1  ">
         <div
