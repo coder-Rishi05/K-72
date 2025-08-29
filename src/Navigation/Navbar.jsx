@@ -1,6 +1,21 @@
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useRef } from "react";
 
 const Navbar = () => {
+  const colGreen = useRef(null);
+
+  // const colorHandle = () => {
+  //   useGSAP(() => {
+  //     gsap.to(colGreen.current, {
+  //       // top:10,
+  //       height: "100%",
+  //       delay: 1,
+  //       duration: 0.9,
+  //     });
+  //   });
+  // };
+
   return (
     <div className=" fixed top-0 flex w-full items-start justify-between z-4  ">
       <div className="p-3">
@@ -19,8 +34,20 @@ const Navbar = () => {
           </svg>
         </div>
       </div>
-      <div className="w-[17vw] h-14 bg-black ">
-        <div className=" w-full h-0 hover:h-full hover:cursor-pointer  bg-amber-300  "></div>
+      <div
+        onMouseEnter={() => {
+          colGreen.current.style.height = "100%";
+        }}
+        onMouseLeave={() => {
+          colGreen.current.style.height = "0%";
+        }}
+        className="w-[15.5vw] cursor-pointer relative bg-black h-13  "
+      >
+        <div
+          ref={colGreen}
+          className=" w-full h-0 bg-[#D3FD50] transition-all absolute  top-0  "
+        ></div>
+        <div className=" relative "></div>
       </div>
     </div>
   );
