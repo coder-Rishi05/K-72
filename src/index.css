@@ -8,3 +8,31 @@
     font-family: font2;
     src: url( /fonts/Lausanne-500.woff2);
 }
+
+.moveX{
+    animation-name: moveAnimation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moveLink{
+    opacity: 0;
+    transition: all ease .8s;
+    cursor: pointer;
+
+}
+
+.link:hover .moveLink{
+    opacity: 1;
+}
+
+@keyframes moveAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to{
+
+        transform: translateX(-100%);
+    }
+}
