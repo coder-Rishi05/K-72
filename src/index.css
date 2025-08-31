@@ -28,7 +28,7 @@
 }
 
 .lineParent:hover > .lines {
-    background-color: #000000;
+    background-color: #000010;
 }
 
 @keyframes moveAnimation {

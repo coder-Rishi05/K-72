@@ -2,13 +2,17 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useContext, useEffect, useRef, useState } from "react";
-// import { NavbarContext } from '../../context/NavContext'
+import NavContext from "../context/NavContext";
+import { NavbarContext } from "../context/NavContext";
 
 const FullScreen = () => {
-
-
-  // const staireParentRef = useRef(null);
+  const fullScreenav = useRef(null);
   const fullNavLinkRef = useRef(null);
+
+  const [navOpen, setNavOpen] = useContext(NavbarContext);
+
+  console.log(navOpen);
+  console.log(setNavOpen);
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -23,20 +27,30 @@ const FullScreen = () => {
     tl.from(fullNavLinkRef.current, {
       opacity: 0,
     });
-    tl.from(".link",{
-      rotateX:90,
-      stagger:{
-        amount:.5
-      }
-    })
-  });
+    tl.from(".link", {
+      rotateX: 90,
+      stagger: {
+        amount: 0.5,
+      },
+    });
+    tl.pause();
+
+    if (navOpen) {
+      fullScreenav.current.style.display = 'block'
+      tl.play();
+    } else {
+      fullScreenav.current.style.display = 'none'
+      tl.reverse();
+    }
+  }, [navOpen]);
 
   return (
     <div
-      id="fullScreennav"
-      className="hidden h-screen w-full absolute  overflow-hidden bg-black text-white "
+      id="fullScreenav"
+      ref={fullScreenav}
+      className=" h-screen w-full absolute z-50 overflow-hidden bg-black text-white "
     >
-      <div  className="h-screen w-full fixed ">
+      <div className="h-screen w-full fixed ">
         <div className="h-full w-full flex ">
           <div className=" stairing h-full w-1/5 bg-red-700 "></div>
           <div className=" stairing h-full w-1/5 bg-red-700 "></div>

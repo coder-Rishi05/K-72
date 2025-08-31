@@ -1,20 +1,12 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
+import { NavbarContext } from "../context/NavContext";
 
 const Navbar = () => {
   const colGreen = useRef(null);
 
-  // const colorHandle = () => {
-  //   useGSAP(() => {
-  //     gsap.to(colGreen.current, {
-  //       // top:10,
-  //       height: "100%",
-  //       delay: 1,
-  //       duration: 0.9,
-  //     });
-  //   });
-  // };
+  const [navOpen, setNavOpen] = useContext(NavbarContext);
 
   return (
     <div className=" fixed top-0 flex w-full items-start justify-between z-4  ">
@@ -35,6 +27,9 @@ const Navbar = () => {
         </div>
       </div>
       <div
+        onClick={() => {
+          setNavOpen(true);
+        }}
         onMouseEnter={() => {
           colGreen.current.style.height = "100%";
         }}
@@ -47,9 +42,9 @@ const Navbar = () => {
           ref={colGreen}
           className=" w-full h-0 bg-[#D3FD50] transition-all absolute  top-0  "
         ></div>
-        <div className=" lineParent relative w-full h-full  flex items-end pr-8 justify-center flex-col gap-1">
-          <div className="lines w-12 h-[2.1px]  rounded bg-white/85 "></div>
-          <div className="lines w-7 h-[1.9px]   rounded bg-white/85"></div>
+        <div className=" lineParent  relative w-full h-full  flex items-end pr-8 justify-center flex-col gap-1">
+          <div className="lines w-12 h-[2.1px]  rounded bg-white/95 "></div>
+          <div className="lines w-7 h-[1.5px]   rounded bg-white/95"></div>
         </div>
       </div>
     </div>
