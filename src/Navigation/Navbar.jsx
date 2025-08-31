@@ -47,7 +47,7 @@ const Navbar = () => {
           ref={colGreen}
           className=" w-full h-0 bg-[#D3FD50] transition-all absolute  top-0  "
         ></div>
-        <div className=" relative "></div>
+      
       </div>
     </div>
   );

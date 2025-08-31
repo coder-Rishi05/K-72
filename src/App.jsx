@@ -8,13 +8,13 @@ import FullScreen from "./Navigation/FullScreen";
 const App = () => {
   return (
     <div>
-      {/* <Navbar />  */}
+      <Navbar /> 
       <FullScreen />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/agency" element={<Agency />} />
-      </Routes> */}
+      </Routes>
     </div>
   );
 };

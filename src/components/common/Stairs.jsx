@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 // import App from "../../App";
 
 const Stairs = (props) => {
+  
   console.log(props.children);
 
   const current = useLocation();
@@ -46,7 +47,7 @@ const Stairs = (props) => {
     gsap.from(paegeRef.current, {
       opacity: 0,
       delay: 1.3,
-      scale:1.2
+      scale: 1.2,
     });
   }, [current.pathname]); // now the animation will play when the page path is changed.
   return (

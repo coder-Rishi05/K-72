@@ -1,16 +1,52 @@
-import React from "react";
+// import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useContext, useEffect, useRef, useState } from "react";
+// import { NavbarContext } from '../../context/NavContext'
 
 const FullScreen = () => {
+
+
+  // const staireParentRef = useRef(null);
+  const fullNavLinkRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+
+    tl.from(".stairing", {
+      height: 0,
+      delay: 1,
+      stagger: {
+        amount: -0.2,
+      },
+    });
+    tl.from(fullNavLinkRef.current, {
+      opacity: 0,
+    });
+    tl.from(".link",{
+      rotateX:90,
+      stagger:{
+        amount:.5
+      }
+    })
+  });
+
   return (
     <div
       id="fullScreennav"
-      className="h-screen w-full absolute  overflow-hidden bg-black text-white "
+      className="hidden h-screen w-full absolute  overflow-hidden bg-black text-white "
     >
-      <div>
-        
+      <div  className="h-screen w-full fixed ">
+        <div className="h-full w-full flex ">
+          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
+          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
+          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
+          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
+          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
+        </div>
       </div>
-      <div>
-        <div className="flex w-full justify-between p-5 items-start ">
+      <div ref={fullNavLinkRef} className="relative">
+        <div className=" cross-icon flex w-full justify-between p-5 items-start ">
           <div className="px-3 pt-1">
             <div className=" ">
               <svg
@@ -35,7 +71,7 @@ const FullScreen = () => {
           </div>
         </div>
         <div className="">
-          <div className="link relative  border-gray-100/50 border-t-1 ">
+          <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
             <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
               Projets
             </h1>
@@ -78,7 +114,7 @@ const FullScreen = () => {
               </div>
             </div>
           </div>
-          <div className="link relative  border-gray-100/50 border-t-1 ">
+          <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
             <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
               Agence
             </h1>
@@ -121,7 +157,7 @@ const FullScreen = () => {
               </div>
             </div>
           </div>
-          <div className="link relative  border-gray-100/50 border-t-1 ">
+          <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
             <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
               Contact
             </h1>
@@ -164,7 +200,7 @@ const FullScreen = () => {
               </div>
             </div>
           </div>
-          <div className="link relative  border-gray-100/50 border-t-1 ">
+          <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
             <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
               Blogue
             </h1>

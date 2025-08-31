@@ -27,6 +27,10 @@
     opacity: 1;
 }
 
+.lineParent:hover > .lines {
+    background-color: #000000;
+}
+
 @keyframes moveAnimation {
     from {
         transform: translateX(0);
