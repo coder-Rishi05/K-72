@@ -8,59 +8,95 @@ import { NavbarContext } from "../context/NavContext";
 const FullScreen = () => {
   const fullScreenav = useRef(null);
   const fullNavLinkRef = useRef(null);
+  const myCross = useRef(null);
 
   const [navOpen, setNavOpen] = useContext(NavbarContext);
 
-  console.log(navOpen);
-  console.log(setNavOpen);
+  // console.log(navOpen);
+  // console.log(setNavOpen);
 
-  useGSAP(() => {
+  function gsapAnimation() {
     const tl = gsap.timeline();
 
-    tl.from(".stairing", {
-      height: 0,
-      delay: 1,
+    tl.to(fullScreenav.current, {
+      display: "block",
+    });
+
+    tl.to(".stairing", {
+      delay: 0.2,
+      height: "100%",
       stagger: {
-        amount: -0.2,
+        amount: -0.3,
       },
     });
-    tl.from(fullNavLinkRef.current, {
-      opacity: 0,
+
+    tl.to(".link", {
+      opacity: 1,
+      rotateX: 0,
+      stagger: {
+        amount: 0.3,
+      },
     });
-    tl.from(".link", {
+    tl.to(".navlink", {
+      opacity: 1,
+    });
+  }
+  function gsapAnimationReverse() {
+    const tl = gsap.timeline();
+
+    tl.to(".link", {
+      opacity: 0,
       rotateX: 90,
       stagger: {
-        amount: 0.5,
+        amount: 0.1,
       },
     });
-    tl.pause();
+    tl.to(".stairing", {
+      height: 0,
+      stagger: {
+        amount: 0.3,
+      },
+    });
+    // tl.from(myCross.current,{
+    //   opacity:0
+    // })
+    tl.to(".navlink", {
+      opacity: 0,
+    });
 
-    if (navOpen) {
-      fullScreenav.current.style.display = 'block'
-      tl.play();
-    } else {
-      fullScreenav.current.style.display = 'none'
-      tl.reverse();
-    }
-  }, [navOpen]);
+    tl.to("#fullScreenav", {
+      display: "none",
+      delay: 1,
+    });
+  }
 
+  useGSAP(
+    function () {
+      if (navOpen) {
+        gsapAnimation();
+      } else {
+        gsapAnimationReverse();
+      }
+    },
+    [navOpen]
+  );
   return (
     <div
       id="fullScreenav"
       ref={fullScreenav}
-      className=" h-screen w-full absolute z-50 overflow-hidden bg-black text-white "
+      className="hidden h-screen w-full absolute z-50 overflow-hidden text-white "
     >
       <div className="h-screen w-full fixed ">
         <div className="h-full w-full flex ">
-          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
-          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
-          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
-          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
-          <div className=" stairing h-full w-1/5 bg-red-700 "></div>
+          <div className=" stairing h-full w-1/5 bg-black "></div>
+          <div className=" stairing h-full w-1/5 bg-black "></div>
+          <div className=" stairing h-full w-1/5 bg-black "></div>
+          <div className=" stairing h-full w-1/5 bg-black "></div>
+          <div className=" stairing h-full w-1/5 bg-black "></div>
         </div>
       </div>
       <div ref={fullNavLinkRef} className="relative">
-        <div className=" cross-icon flex w-full justify-between p-5 items-start ">
+        <div className=" navlink  flex w-full justify-between p-5 items-start ">
           <div className="px-3 pt-1">
             <div className=" ">
               <svg
@@ -78,7 +114,13 @@ const FullScreen = () => {
             </div>
           </div>
 
-          <div className="h-32 w-32 relative cursor-pointer  ">
+          <div
+            ref={myCross}
+            onClick={() => {
+              setNavOpen(false);
+            }}
+            className="   h-32 w-32 relative cursor-pointer  "
+          >
             <div className="h-44 w-[1.5px]  absolute -rotate-45 origin-top   bg-[#D3FD50]"></div>
             <div className="h-44 w-[1.5px]  right-0 absolute rotate-45 origin-top  bg-[#D3FD50]"></div>
             {/* <div className=""></div> */}
