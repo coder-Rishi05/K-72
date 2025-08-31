@@ -47,7 +47,10 @@ const Navbar = () => {
           ref={colGreen}
           className=" w-full h-0 bg-[#D3FD50] transition-all absolute  top-0  "
         ></div>
-      
+        <div className=" lineParent relative w-full h-full  flex items-end pr-8 justify-center flex-col gap-1">
+          <div className="lines w-12 h-[2.1px]  rounded bg-white/85 "></div>
+          <div className="lines w-7 h-[1.9px]   rounded bg-white/85"></div>
+        </div>
       </div>
     </div>
   );
