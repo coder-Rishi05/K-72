@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className=" fixed top-0 flex w-full items-start justify-between z-4  ">
       <div className="p-3">
-        <div className="w-36">
+        <div className="lg:w-36 sm:24">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="113"
@@ -36,12 +36,14 @@ const Navbar = () => {
         onMouseLeave={() => {
           colGreen.current.style.height = "0%";
         }}
-        className="w-[15.5vw] cursor-pointer relative bg-black h-13  "
+        className="lg:w-[15.5vw] w-[50vw] cursor-pointer relative bg-black lg:h-16 h-12  "
       >
         <div
           ref={colGreen}
           className=" w-full h-0 bg-[#D3FD50] transition-all absolute  top-0  "
-        ></div>
+        >
+
+        </div>
         <div className=" lineParent  relative w-full h-full  flex items-end pr-8 justify-center flex-col gap-1">
           <div className="lines w-12 h-[2.1px]  rounded bg-white/95 "></div>
           <div className="lines w-7 h-[1.5px]   rounded bg-white/95"></div>
