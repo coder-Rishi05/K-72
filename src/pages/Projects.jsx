@@ -1,69 +1,63 @@
 import React from "react";
-import img1 from "/img1.jpg";
-import img2 from "/img2.jpg";
-import img3 from "/img3.jpg";
-import img4 from "/img4.jpg";
-import img5 from "/img5.jpg";
-import img6 from "/img6.jpg";
-import img7 from "/img7.jpg";
-import img8 from "/img8.jpg";
-import img9 from "/img9.jpg";
-import img10 from "/img10.jpg";
-import img11 from "/img11.pg";
-import img12 from "/img12.jpg";
+import img1 from "../../public/projets_img/img1.jpg";
+import img2 from "../../public/projets_img/img2.jpg";
+import img3 from "../../public/projets_img/img3.jpg";
+import img4 from "../../public/projets_img/img4.jpg";
+import img5 from "../../public/projets_img/img5.jpg";
+import img6 from "../../public/projets_img/img6.jpg";
+import img7 from "../../public/projets_img/img7.jpg";
+import img8 from "../../public/projets_img/img8.jpg";
 import ProjectCard from "../components/Projects/ProjectCard";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+// import img9 from "../../public/projets_img/img9.jpg";
+// import img10 from "../../public/projets_img/img10.jpg";
+// import img11 from "../../public/projets_img/img11.jpg";
+// import img12 from "../../public/projets_img/img12.jpg";
 
 const Projects = () => {
   const ImgArray = [
     {
-      imgSrc: img1,
+      imgSrc1: img1,
+      imgSrc2: img2,
       tag: "Voir le projet",
     },
     {
-      imgSrc: img2,
+      imgSrc1: img3,
+      imgSrc2: img4,
       tag: "Voir le projet",
     },
     {
-      imgSrc: img3,
+      imgSrc1: img5,
+      imgSrc2: img6,
       tag: "Voir le projet",
     },
     {
-      imgSrc: img4,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img5,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img6,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img7,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img8,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img9,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img10,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img11,
-      tag: "Voir le projet",
-    },
-    {
-      imgSrc: img12,
+      imgSrc1: img7,
+      imgSrc2: img8,
       tag: "Voir le projet",
     },
   ];
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useGSAP(() => {
+    gsap.from(".hero", {
+      height: '100px',
+      stagger: {
+        amount: 0.5,
+      },
+      scrollTrigger: {
+        trigger: ".parent",
+        // markers: true,
+        start: "top 100%",
+        end:"top -150%",
+        scrub:true 
+      },
+    });
+  });
 
   return (
     <div className="p-4">
@@ -75,9 +69,15 @@ const Projects = () => {
           </sup>
         </h2>
       </div>
-      <div className=" -mt-10">
+      <div className="parent -mt-10">
         {ImgArray.map((item, index) => (
-          <ProjectCard img={item} key={index} />
+          <div key={index} className="hero w-full  h-[70 0px] mb-4 flex gap-4 ">
+            <ProjectCard
+              img1={item.imgSrc1}
+              tag={item.tag}
+              img2={item.imgSrc2}
+            />
+          </div>
         ))}
       </div>
     </div>
