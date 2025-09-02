@@ -11,7 +11,7 @@ const Home = () => {
       </div>
       <div className="  h-screen w-screen  relative flex flex-col justify-between  ">
         <HomeHeroText />
-        <HomeBottomText />
+        <HomeBottomText  />
       </div>
     </div>
   );
