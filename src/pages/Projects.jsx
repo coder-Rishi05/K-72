@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import img1 from "../../public/projets_img/img1.jpg";
 import img2 from "../../public/projets_img/img2.jpg";
 import img3 from "../../public/projets_img/img3.jpg";
@@ -11,6 +11,7 @@ import ProjectCard from "../components/Projects/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { NavbarColorContext } from "../context/NavContext";
 
 // import img9 from "../../public/projets_img/img9.jpg";
 // import img10 from "../../public/projets_img/img10.jpg";
@@ -18,6 +19,9 @@ import { ScrollTrigger } from "gsap/all";
 // import img12 from "../../public/projets_img/img12.jpg";
 
 const Projects = () => {
+
+  // const [navColor, setNavColor] = useContext(NavbarColorContext)
+
   const ImgArray = [
     {
       imgSrc1: img1,
