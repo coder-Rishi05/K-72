@@ -95,8 +95,9 @@ const FullScreen = () => {
           <div className=" stairing h-full w-1/5 bg-black "></div>
         </div>
       </div>
+
       <div ref={fullNavLinkRef} className="relative">
-        <div className=" navlink  flex w-full justify-between p-5 items-start ">
+        <div className=" navlink  flex w-full justify-between lg:p-5 p-2 items-start ">
           <div className="px-3 pt-1">
             <div className=" ">
               <svg
@@ -119,51 +120,52 @@ const FullScreen = () => {
             onClick={() => {
               setNavOpen(false);
             }}
-            className="   h-32 w-32 relative cursor-pointer  "
+            className="  h-20 lg:h-32  w-20 lg:w-32 relative cursor-pointer  "
           >
-            <div className="h-44 w-[1.5px]  absolute -rotate-45 origin-top   bg-[#D3FD50]"></div>
-            <div className="h-44 w-[1.5px]  right-0 absolute rotate-45 origin-top  bg-[#D3FD50]"></div>
+            <div className="lg:h-44 h-28  lg:w-[1.5px] w-0.5   absolute -rotate-45 origin-top   bg-[#D3FD50]"></div>
+            <div className="lg:h-44 h-28  lg:w-[1.5px] w-0.5   right-0 absolute rotate-45 origin-top  bg-[#D3FD50]"></div>
             {/* <div className=""></div> */}
           </div>
         </div>
-        <div className="">
+
+        <div className="py-34 lg:py-1">
           <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
-            <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
+            <h1 className="uppercase font-[font2] tracking-tight lg:text-[8vw] text-6xl leading-[0.8] lg:pt-5  pt-2 text-center ">
               Projets
             </h1>
             <div className="moveLink absolute text-black flex bg-[#D3FD50] top-0 ">
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
               </div>
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
@@ -171,42 +173,42 @@ const FullScreen = () => {
             </div>
           </div>
           <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
-            <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
+            <h1 className="uppercase font-[font2] tracking-tight lg:text-[8vw] text-6xl leading-[0.8] lg:pt-5  pt-2 text-center ">
               Agence
             </h1>
             <div className="moveLink absolute text-black flex bg-[#D3FD50] top-0 ">
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
               </div>
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
@@ -214,91 +216,105 @@ const FullScreen = () => {
             </div>
           </div>
           <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
-            <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
+            <h1 className="uppercase font-[font2] tracking-tight lg:text-[8vw] text-6xl leading-[0.8] lg:pt-5  pt-2 text-center ">
               Contact
             </h1>
             <div className="moveLink absolute text-black flex bg-[#D3FD50] top-0 ">
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
               </div>
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
               </div>
             </div>
           </div>
-          <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
-            <h1 className="uppercase font-[font2] tracking-tight text-[8vw] leading-[0.8] pt-5  text-center ">
+          <div className="link relative origin-top  border-gray-100/50 border-y-1  ">
+            <h1 className="uppercase font-[font2] tracking-tight lg:text-[8vw] text-6xl leading-[0.8] lg:pt-5  pt-2 text-center ">
               Blogue
             </h1>
             <div className="moveLink absolute text-black flex bg-[#D3FD50] top-0 ">
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
               </div>
               <div className="moveX flex items-center   ">
-                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className="  uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img4.jpg"
                   alt=""
                 />
-                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight   text-[8vw] leading-[0.8] pt-5  text-center">
+                <h2 className=" text-black uppercase whitespace-nowrap font-[font2] tracking-tight text-5xl    lg:text-[8vw] lg:leading-[0.8]  leading-0 lg:pt-5  pt-3  text-center">
                   Pour Tout VOIR
                 </h2>
                 <img
-                  className="h-20 object-center mx-8 rounded-full  w-56 object-cover shrink-0"
+                  className="lg:h-20 h-14  object-center mx-8 rounded-full w-32  py-1  lg:w-56 object-cover shrink-0"
                   src="public/img_nav/img5.jpg"
                   alt=""
                 />
               </div>
             </div>
           </div>
+        </div>
+        <div className="btmtext uppercase   flex-col lg:flex-row gap-0 flex mb-20  lg:mt-40 items-center z-100  justify-center lg:gap-10">
+          <p className="text-white   text-[9px] lg:text-[10px]  lg:leading-2 lg:tracking-tighter font-[font2] ">
+            Privacy Policy
+          </p>
+          <p className="text-white   text-[9px] lg:text-[10px]  lg:leading-2 lg:tracking-tighter font-[font2] ">
+            Privacy Notice
+          </p>
+          <p className="text-white lg:pr-0 pr-1 text-[9px] lg:text-[10px]  lg:leading-2 lg:tracking-tighter font-[font2] ">
+            Ethics report
+          </p>
+          <p className="text-white lg:pl-0  pl-2 text-[9px] lg:text-[10px]  lg:leading-2 lg:tracking-tighter font-[font2] ">
+            Concent Choice
+          </p>
         </div>
       </div>
     </div>
