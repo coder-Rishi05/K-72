@@ -60,18 +60,18 @@ const Projects = () => {
   });
 
   return (
-    <div className="p-4">
-      <div className=" pt-[45vh]">
-        <h2 className="font-[font2] relative uppercase text-[10.5vw] font-bold ">
+    <div className="lg:p-4 p-2">
+      <div className=" pt-[30vh] lg:pt-[45vh]">
+        <h2 className="font-[font2] relative uppercase text-7xl lg:text-[10.5vw] font-bold ">
           Projets
-          <sup className="text-4xl absolute top-14 font-bold font-[font2] ">
+          <sup className="lg:text-4xl text-sm absolute lg:top-14 top-0 font-bold font-[font2] ">
             16
           </sup>
         </h2>
       </div>
-      <div className="parent -mt-10">
+      <div className="parent -mt-2 -lg:mt-10">
         {ImgArray.map((item, index) => (
-          <div key={index} className="hero w-full  h-[70 0px] mb-4 flex gap-4 ">
+          <div key={index} className="hero w-full  lg:h-[850px] mb-4 flex-col lg:flex-row  flex lg:gap-4 gap-2  ">
             <ProjectCard
               img1={item.imgSrc1}
               tag={item.tag}

@@ -3,7 +3,7 @@ import React from "react";
 const ProjectCard = (props) => {
   return (
     <>
-      <div className="w-1/2  group  transition-all duration-200 cursor-pointer hover:rounded-[50px] relative overflow-hidden h-full ">
+      <div className="lg:w-1/2  group  transition-all duration-200 cursor-pointer hover:rounded-[50px] relative overflow-hidden h-full ">
         <img
           className="w-full h-full  object-cover object-center "
           src={props.img1}
@@ -15,7 +15,7 @@ const ProjectCard = (props) => {
           </h2>
         </div>
       </div>
-      <div className="w-1/2  group  transition-all duration-200 cursor-pointer hover:rounded-[50px] relative overflow-hidden h-full ">
+      <div className="lg:w-1/2  group  transition-all duration-200 cursor-pointer hover:rounded-[50px] relative overflow-hidden h-full ">
         <img
           className="w-full h-full  object-cover object-center "
           src={props.img2}
