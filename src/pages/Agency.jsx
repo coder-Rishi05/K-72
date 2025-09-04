@@ -60,7 +60,7 @@ const Agency = () => {
       <div id="page1" className="py-1 ">
         <div
           ref={imageDivRef}
-          className="absolute overflow-hidden -z-10 w-22 lg:w-[18vw] rounded-3xl lg:top-26 -top-[40%] left-[34%] -translate-x-1/2 -translate-y-1/2   "
+          className="absolute overflow-hidden -z-10 w-22 lg:w-[18vw] rounded-3xl lg:top-40 -top-[40%] left-[34%] -translate-x-1/2 -translate-y-1/2   "
         >
           <img
             ref={imageRef}
@@ -70,7 +70,7 @@ const Agency = () => {
           />
         </div>
         <div className=" font-[font2]">
-          <div className="lg:mt-[57vh] mt-[38vh]">
+          <div className="lg:mt-[50vh] mt-[38vh]">
             <h1 className="relative lg:text-[20vw]  text-[16vw] text-center uppercase leading-[18vw]">
               SEVEN7Y
               <br />
