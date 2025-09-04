@@ -10,9 +10,9 @@ const Agency = () => {
   const imageRef = useRef(null);
 
   const imageArray = [
-    "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg",
@@ -31,13 +31,15 @@ const Agency = () => {
       scrollTrigger: {
         trigger: imageDivRef.current,
         // markers: true,
-        start: "top 28%",
-        end: "top -70%",
+        delay: 1,
+        start: "top 26%",
+        end: "top -130%",
+
         pin: true,
         pinSpacing: true,
         pinReparent: true,
         pinType: "transform",
-        scrub: 1, // smooth scrubbing with 1s easing
+        scrub: 2, // smooth scrubbing with 1s easing
         anticipatePin: 1,
         invalidateOnRefresh: true,
         onUpdate: (elem) => {
@@ -58,7 +60,7 @@ const Agency = () => {
       <div id="page1" className="py-1 ">
         <div
           ref={imageDivRef}
-          className="absolute overflow-hidden lg:h-[20vw] h-[30vw] lg:rounded-3xl rounded-xl lg:w-[15vw] w-[25vw] lg:top-96 -top-80 lg:left-[30vw] left-[30vw]"
+          className="absolute overflow-hidden -z-10 w-22 lg:w-[18vw] rounded-3xl lg:top-26 -top-[40%] left-[34%] -translate-x-1/2 -translate-y-1/2   "
         >
           <img
             ref={imageRef}
@@ -67,15 +69,16 @@ const Agency = () => {
             alt=""
           />
         </div>
-        <div className="relative font-[font2]">
-          <div className="lg:mt-[55vh] mt-[30vh]">
-            <h1 className="text-[20vw] text-center uppercase leading-[18vw]">
-              Soixan7e <br />
-              Douze
+        <div className=" font-[font2]">
+          <div className="lg:mt-[57vh] mt-[38vh]">
+            <h1 className="relative lg:text-[20vw]  text-[16vw] text-center uppercase leading-[18vw]">
+              SEVEN7Y
+              <br />
+              TWO
             </h1>
           </div>
-          <div className="lg:pl-[40%] lg:mt-20 mt-4 p-3">
-            <p className="lg:text-6xl text-xl leading-tight">
+          <div className="lg:pl-[40%] mt-15 z-50 lg:mt-20  p-3">
+            <p className="lg:text-5xl text-xl lg:leading-tight  leading-6">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Notre curiosité nourrit notre créativité. On reste humbles et on
               dit non aux gros egos, même le vôtre. Une marque est vivante. Elle

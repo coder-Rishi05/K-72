@@ -19,7 +19,6 @@ import { NavbarColorContext } from "../context/NavContext";
 // import img12 from "../../public/projets_img/img12.jpg";
 
 const Projects = () => {
-
   // const [navColor, setNavColor] = useContext(NavbarColorContext)
 
   const ImgArray = [
@@ -45,20 +44,20 @@ const Projects = () => {
     },
   ];
 
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
     gsap.from(".hero", {
-      height: '100px',
+      height: "200px",
       stagger: {
-        amount: 0.5,
+        amount: 0.4,
       },
       scrollTrigger: {
         trigger: ".parent",
         // markers: true,
-        start: "top 100%",
-        end:"top -150%",
-        scrub:true 
+        start: "top 40%",
+        end: "top -150%",
+        scrub: true,
       },
     });
   });
@@ -75,7 +74,10 @@ const Projects = () => {
       </div>
       <div className="parent -mt-2 -lg:mt-10">
         {ImgArray.map((item, index) => (
-          <div key={index} className="hero w-full  lg:h-[850px] mb-4 flex-col lg:flex-row  flex lg:gap-4 gap-2  ">
+          <div
+            key={index}
+            className="hero w-full  lg:h-[550px] mb-4 flex-col lg:flex-row  flex lg:gap-4 gap-2  "
+          >
             <ProjectCard
               img1={item.imgSrc1}
               tag={item.tag}
