@@ -218,7 +218,8 @@ const FullScreen = () => {
               </div>
             </a>
           </div>
-          <div className="link relative origin-top  border-gray-100/50 border-t-1 ">
+          
+          <Link to="/contact" className="link relative origin-top  border-gray-100/50 border-t-1 ">
             <h1 className="uppercase font-[font2] tracking-tight lg:text-[8vw] text-6xl leading-[0.8] lg:pt-5  pt-2 text-center ">
               Contact
             </h1>
@@ -260,7 +261,7 @@ const FullScreen = () => {
                 />
               </div>
             </div>
-          </div>
+          </Link>
           <div className="link relative origin-top  border-gray-100/50 border-y-1  ">
             <h1 className="uppercase font-[font2] tracking-tight lg:text-[8vw] text-6xl leading-[0.8] lg:pt-5  pt-2 text-center ">
               Blogue
