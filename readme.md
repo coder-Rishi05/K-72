@@ -4,3 +4,5 @@ official page link : https://k72.ca/en
 
 
  <img src="public/img/project_img.jpeg" alt="project img" />
+
+ Tech stack := react,react router, gsap, tailwind
